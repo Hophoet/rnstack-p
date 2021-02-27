@@ -1,4 +1,5 @@
 import React from 'react';
+import WebApp from './apps/web/Home.js'
 import {
   StyleSheet,
   View,
@@ -10,10 +11,9 @@ import {
 export default class App extends React.Component{
 	render(){
 		return (
-			<View style={styles.container}>
-				<Text>APP</Text>
-			</View>
+			<WebApp/>
 		)
+
 	}
 
 }
