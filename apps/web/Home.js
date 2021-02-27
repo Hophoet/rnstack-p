@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, Dimensions} from 'react-native';
+import {View, StyleSheet, Text, TouchableOpacity, Dimensions} from 'react-native';
+import { WebView } from 'react-native-webview';
 
 export default class Home extends React.Component{
 	constructor(props){
@@ -9,9 +10,11 @@ export default class Home extends React.Component{
 
 	render(){
 		return (
-			<View style={styles.container}>	
-				<Text>HOME</Text>
-			</View>	
+			<WebView
+				source={{uri:'https://google.com'}}
+				style={styles.container}
+				allowsBackForwardNavigationGestures={true}
+			/>
 		)
 	}
 }
@@ -19,7 +22,6 @@ export default class Home extends React.Component{
 const styles = StyleSheet.create({
 	container:{
 		flex:1,
-		
 	}
 
 })
